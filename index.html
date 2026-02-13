@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="Styles/style.css">
         <link rel="stylesheet" href="Styles/Blobmoji.css">
         <link rel="stylesheet" href="Styles/JetBrains Mono.css">
-        <script type="text/javascript" src="Generators/FU2.js"></script>
         <script type="text/javascript" src="Generators/answerYESno.js"></script>
         <script type="text/javascript" src="Generators/createNPC.js"></script>
         <script type="text/javascript" src="Generators/topic.js"></script>
@@ -16,21 +15,6 @@
     <body>
         <div id="wrapper">
             <h1>Random Generators</h1>
-            <div id="FU2">
-                <h2>⚔️ FU2 Action Rolls</h2>
-                <ul class="not-list">
-                    <li>➕ Advantages: <input class="numberInput" type="number" value="0" id="actions" min="0"></li>
-                    <li>➖ Disadvantages: <input class="numberInput" type="number" value="0" id="dangers" min="0"></li>
-                </ul>
-                <p>
-                    <input class="button" type="button" value="Roll!" onclick="rollCheck(document.getElementById('actions').value, document.getElementById('dangers').value)">
-                    <input class="button" type="button" value="Clear" onclick="document.getElementById('fu2result').innerHTML='Roll for value!';document.getElementById('actions').value=0;document.getElementById('dangers').value=0">
-                </p>    
-                <p>
-                    <b>Result:</b> <span id="fu2result">Roll for value!</span>
-                </p>
-            </div>
-            <hr>
             <div id="fate">
                 <h2>🎲 CRGE Fate Rolls</h2>
                 <p>
@@ -142,4 +126,5 @@
             </footer>
         </div>
     </body>
+
 </html>
