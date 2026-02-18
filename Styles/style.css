@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrains Mono", "Blobs", "Blobmoji";
+    font-family: "Scaly Sans", "Blobs", "Blobmoji";
     color: #454545;
     font-size: 1rem;
 }
@@ -15,6 +15,13 @@ body {
 
 h1 {
     text-align: center;
+    font-family: FlatBread !important;
+    color: #222;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Nusaliver !important;
+    color: #222;
 }
 
 .numberInput {
@@ -28,13 +35,11 @@ h1 {
 
 h1 {
     font-size: 3rem;
-    color: #0C090A;
 }
 
 h2 {
     font-size: 2rem;
     margin-top: 2rem;
-    color: #0C090A;
 }
 
 b {
