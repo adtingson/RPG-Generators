@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="Styles/icrpg fonts.css">
         <link rel="stylesheet" href="Styles/style.css">
         <script type="text/javascript" src="Generators/5td-PCStat.js"></script>
+        <script type="text/javascript" src="Generators/5td-mapGenerator.js"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -39,6 +40,36 @@
                         </ul>
                         <span id="additionalRule"></span>
                     </p>
+            </div>
+            <hr>
+            <div id="randomMap">
+                <h2>Random Maps</h2>
+                <p>
+                    <input type="button" value="Generate Map!" onclick="generateMAP();">
+                    <input type="button" value="Clear" onclick="clearMAP();">
+                    <div id="boxMap">
+                        <div id="map1"></div>
+                        <div id="map2"></div>
+                        <div id="map3"></div>
+                        <div id="map4"></div>
+                        <div id="map5"></div>
+                        <div id="map6"></div>
+                        <div id="map7"></div>
+                        <div id="map8"></div>
+                        <div id="map9"></div>
+                    </div>
+                </p>
+                <p>
+                    <h3>Legend:</h3>
+                    <ul>
+                        <li><b>White</b>: open path, entrance, or clearing</li>
+                        <li><b>Blue</b>: alternative path (water, ascent)</li>
+                        <li><b>Green</b>: a key destination (treasure)</li>
+                        <li><b>Yellow</b>: passive threat, hazards, terrain</li>
+                        <li><b>Orange</b>: danger, enemy convergences</li>
+                        <li><b>Red</b>: blocked or locked, can't travel by any normal means (door, wall, etc)</li>
+                    </ul>
+                </p>
             </div>
         </div>
     </body>

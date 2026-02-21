@@ -74,6 +74,22 @@ li {
     line-height: 2rem;
 }
 
+#boxMap {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+#boxMap div {
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #fff;
+}
+
 @media screen and (max-width: 616px) {
     #wrapper {
         margin: 0 1rem;
