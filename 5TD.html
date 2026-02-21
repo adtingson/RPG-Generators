@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Five Torches Deep Generators</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/icrpg fonts.css">
+        <link rel="stylesheet" href="Styles/style.css">
+        <script type="text/javascript" src="Generators/5td-PCStat.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Five Torches Deep Generators</h1>
+            <div id="abilityScores">
+                <h2>Ability Scores</h2>
+                    <p>
+                        <span class="minor-header">PC Race:</span>
+                        <input type="button" value="Human" onclick="document.getElementById('raceText').innerHTML='Human';document.getElementById('raceCounter').value='1';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='';">
+                        <input type="button" value="Dwarf" onclick="document.getElementById('raceText').innerHTML='Dwarf';document.getElementById('raceCounter').value='2';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='';">
+                        <input type="button" value="Elf" onclick="document.getElementById('raceText').innerHTML='Elf';document.getElementById('raceCounter').value='3';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='';">
+                        <input type="button" value="Halfling" onclick="document.getElementById('raceText').innerHTML='Halfling';document.getElementById('raceCounter').value='4';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='';">
+                        <ul>
+                            <li>PC Race: <span id="raceText">Set Race</span><input type="number" id="raceCounter" style="visibility: hidden;" value="0" min="0"></li>
+                        </ul>
+                    </p>
+                    <p>
+                        <input type="button" value="Roll!" onclick="RaceStats(document.getElementById('raceCounter').value)">
+                        <input type="button" value="Clear"  onclick="document.getElementById('raceText').innerHTML='Set Race';document.getElementById('raceCounter').value='0';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='';">
+                    </p>
+                    <p>
+                        <ul>
+                            <li>STR: <span id="strScore">Set Race and Roll!</span></li>
+                            <li>DEX: <span id="dexScore">Set Race and Roll!</span></li>
+                            <li>CON: <span id="conScore">Set Race and Roll!</span></li>
+                            <li>INT: <span id="intScore">Set Race and Roll!</span></li>
+                            <li>WIS: <span id="wisScore">Set Race and Roll!</span></li>
+                            <li>CHA: <span id="chaScore">Set Race and Roll!</span></li>
+                        </ul>
+                        <span id="additionalRule"></span>
+                    </p>
+            </div>
+        </div>
+    </body>
+</html>
