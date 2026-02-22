@@ -10,10 +10,14 @@
         <script type="text/javascript" src="Generators/5td-PCStat.js"></script>
         <script type="text/javascript" src="Generators/5td-mapGenerator.js"></script>
         <script type="text/javascript" src="Generators/5td-sundriesTable.js"></script>
+        <script type="text/javascript" src="Generators/5td-inspirationGen.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <h1>Five Torches Deep Generators</h1>
+            <nav>
+                <a href="index.html">Home</a> > <a href="#">Five Torches Deep Tables and Generators</a>
+            </nav>
             <div id="abilityScores">
                 <h2>Ability Scores</h2>
                     <p>
@@ -88,6 +92,37 @@
                     </ul>
                 </p>
             </div>
+            <hr>
+            <div id="inspoGenerator">
+                <h2>Adventure/Landmark Inspiration</h2>
+                <p>
+                    <input type="button" value="Generate!" onclick="inspoGen()">
+                    <input type="button" value="Clear" onclick="document.getElementById('inspoRes').innerHTML = 'Generate new!';">
+                    <ul>
+                        <li id="inspoRes">Generate new!</li>
+                    </ul>
+                </p>
+            </div>
+            <hr>
+            <div id="descriptSect">
+                <h2>Descriptors</h2>
+                <p>
+                    Roll for descriptors.
+                    <input type="button" value="Roll!" onclick="descGen();">
+                    <input type="button" value="Clear" onclick="clearDesc();">
+                    <ul>
+                        <li><b>Nature: </b><span id="natureDesc"></span></li>
+                        <li><b>Action: </b><span id="actionDesc"></span></li>
+                        <li><b>Material: </b><span id="materDesc"></span></li>
+                        <li><b>Emotion: </b><span id="emoteDesc"></span></li>
+                        <li><b>Sensory: </b><span id="senseDesc"></span></li>
+                    </ul>
+                </p>
+            </div>
+            <hr>
+            <footer>
+                Created by Albert. 2026.
+            </footer>
         </div>
     </body>
 </html>
