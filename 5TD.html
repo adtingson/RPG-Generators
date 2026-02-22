@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="Styles/style.css">
         <script type="text/javascript" src="Generators/5td-PCStat.js"></script>
         <script type="text/javascript" src="Generators/5td-mapGenerator.js"></script>
+        <script type="text/javascript" src="Generators/5td-sundriesTable.js"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -40,6 +41,22 @@
                         </ul>
                         <span id="additionalRule">Additional Class Rules</span>
                     </p>
+            </div>
+            <hr>
+            <div id="SundriesSection">
+                <h2>Sundries</h2>
+                <p>
+                    How many sundries to roll?
+                    <input type="number" min="1" id="sundryNumber" value="1">
+                    <input type="button" value="Roll!" onclick="document.getElementById('sundriesCreated').innerHTML='';rollSundries(document.getElementById('sundryNumber').value)">
+                    <input type="button" value="Clear" onclick="document.getElementById('sundryNumber').value='1';document.getElementById('sundriesCreated').innerHTML='<li>Roll first! LOL</li>'">
+                </p>
+                <p>
+                    Here are the sundries you rolled:
+                    <ul id="sundriesCreated">
+                        <li>Roll first! LOL</li>
+                    </ul>
+                </p>
             </div>
             <hr>
             <div id="randomMap">
