@@ -18,7 +18,7 @@ function RaceStats(race) {
             var roll2=Math.floor(Math.random()*6)+1;
             var roll3=Math.floor(Math.random()*6)+1;
             var rollTotal=roll1+roll2+roll3;
-            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b> (" + roll1.toString() + " + " + roll2.toString() + " + "  + roll3.toString() + ")";
+            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b>";
             statArray.push(resultPush);
         }
         document.getElementById("strScore").innerHTML = statArray[0];
@@ -34,7 +34,7 @@ function RaceStats(race) {
             var roll1=Math.floor(Math.random()*6)+1;
             var roll2=Math.floor(Math.random()*6)+1;
             var rollTotal=roll1+roll2+3;
-            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b> (" + roll1.toString() + " + " + roll2.toString() + " + 3)";
+            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b>";
             statArray.push(resultPush);
         }
         document.getElementById("strScore").innerHTML = "<b>13 [" + bonusPoints[12] + "]</b>";
@@ -50,7 +50,7 @@ function RaceStats(race) {
             var roll1=Math.floor(Math.random()*6)+1;
             var roll2=Math.floor(Math.random()*6)+1;
             var rollTotal=roll1+roll2+3;
-            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b> (" + roll1.toString() + " + " + roll2.toString() + " + 3)";
+            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b>";
             statArray.push(resultPush);
         }
         document.getElementById("strScore").innerHTML = statArray[0];
@@ -66,7 +66,7 @@ function RaceStats(race) {
             var roll1=Math.floor(Math.random()*6)+1;
             var roll2=Math.floor(Math.random()*6)+1;
             var rollTotal=roll1+roll2+3;
-            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b> (" + roll1.toString() + " + " + roll2.toString() + " + 3)";
+            var resultPush = "<b>" + rollTotal.toString() + "[" + bonusPoints[rollTotal-1] + "]</b>";
             statArray.push(resultPush);
         }
         document.getElementById("strScore").innerHTML = statArray[0];
