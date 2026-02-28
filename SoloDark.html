@@ -14,8 +14,22 @@
         <div id="wrapper">
             <h1>SoloDark for ShadowDark RPG</h1>
             <nav>
-                <a href="index.html">Home</a> > <a href="#">SoloDark for ShadowDark RPG</a>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li class="activepage">
+                                <a href="SoloDark.html">SoloDark for ShadowDark RPG</a>
+                                <ul class="activepage-drop">
+                                    <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                                    <li><a href="CRGE.html">CRGE, UNE, and Bold</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+            <hr>
             <div>
                 <h2>Dungeon Name</h2>
                 <p>
@@ -30,17 +44,15 @@
             <div>
                 <h2>Oracle</h2>
                 <p>
-                    <b>Odds:</b>
-                    <input type="button" value="Unlikely or Impossible" onclick="document.getElementById('oddsValue').value='1';document.getElementById('oddsText').innerHTML='Unlikely or Impossible';">
-                    <input type="button" value="Even" onclick="document.getElementById('oddsValue').value='2';document.getElementById('oddsText').innerHTML='Even';">
-                    <input type="button" value="Likely or Certain" onclick="document.getElementById('oddsValue').value='3';document.getElementById('oddsText').innerHTML='Likely or Certain';">
-                    <input type="number" value="2" id="oddsValue" style="display:none;">
-                </p>
-                <p>
+                    <label for="oddsValue">Odds:</label>
+                    <select name="oddsValue" id="oddsValue">
+                        <option value="1">Unlikely or Impossible</option>
+                        <option value="2" selected>Even</option>
+                        <option value="3">Likely or Certain</option>
+                    </select>
                     <input type="button" value="Roll!" onclick="OracleAnswer(document.getElementById('oddsValue').value);">
-                    <input type="button" value="Clear" onclick="document.getElementById('oddsText').innerHTML='Even';document.getElementById('oracleAnswer').innerHTML='Roll Answer!';">
+                    <input type="button" value="Clear" onclick="document.getElementById('oracleAnswer').innerHTML='Roll Answer!';document.getElementById('oddsValue').value='2';">
                     <ul>
-                        <li id="oddsText">Even</li>
                         <li id="oracleAnswer">Roll Answer!</li>
                     </ul>
                 </p>

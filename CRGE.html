@@ -17,24 +17,35 @@
         <div id="wrapper">
             <h1>Random Generators</h1>
             <nav>
-                <a href="index.html">Home</a> > <a href="#">CRGE, UNE, and BOLD</a>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                        <ul>
+                            <li class="activepage">
+                                <a href="CRGE.html">CRGE, UNE, and Bold</a>
+                                <ul class="activepage-drop">
+                                    <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                                    <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+            <hr>
             <div id="fate">
                 <h2>🎲 CRGE Fate Rolls</h2>
                 <p>
-                    <span class="minor-header">Set Stage:</span>
-                    <input type="button" value="To Knowledge" onclick="document.getElementById('crgestage').innerHTML='To Knowledge';document.getElementById('stageCounter').value=1">
-                    <input type="button" value="To Conflict" onclick="document.getElementById('crgestage').innerHTML='To Conflict';document.getElementById('stageCounter').value=2">
-                    <input type="button" value="To Endings" onclick="document.getElementById('crgestage').innerHTML='To Endings';document.getElementById('stageCounter').value=3">
-                    <br>
-                    Surge: <input id="surgeCount" class="numberInput" type="number" value="0" min="0">
-                </p>
-                <ul>
-                    <li>Stage: <span id="crgestage">Set stage!</span><input id="stageCounter" type="number" value="0" min="0"></li>
-                </ul>
-                <p>
+                    <label for="stageCounter">Set Stage:</label>
+                    <select name="stageCounter" id="stageCounter">
+                        <option value="1" selected>To Knowledge</option>
+                        <option value="2">To Conflict</option>
+                        <option value="3">To Endings</option>
+                    </select>
+                    <label for="surgeCount">Surge:</label>
+                    <input name="surgeCount" id="surgeCount" class="numberInput" type="number" value="0" min="0">
                     <input type="button" value="Roll!" onclick="loomFate(document.getElementById('stageCounter').value,document.getElementById('surgeCount').value)">
-                    <input type="button" value="Clear" onclick="document.getElementById('crgeresult').innerHTML='Set stage, then roll for value!';document.getElementById('crgestage').innerHTML='Set stage!';document.getElementById('stageCounter').value=0;document.getElementById('surgeCount').value=0">
+                    <input type="button" value="Clear" onclick="document.getElementById('crgeresult').innerHTML='Set stage, then roll for value!';document.getElementById('stageCounter').value=1;document.getElementById('surgeCount').value=0">
                 </p>
                 <p>
                     <b>Result:</b> <span id="crgeresult">Set stage, then roll for value!</span>
@@ -44,20 +55,17 @@
             <div id="npc">
                 <h2>🧑 UNE NPC Generator</h2>
                 <p>
-                    <span class="minor-header">Randomness:</span>
-                    <input type="button" value="Undefined" onclick="document.getElementById('randtext').innerHTML='Undefined';document.getElementById('randlevel').value=0">
-                    <input type="button" value="Order" onclick="document.getElementById('randtext').innerHTML='Order';document.getElementById('randlevel').value=1">
-                    <input type="button" value="Calm" onclick="document.getElementById('randtext').innerHTML='Calm';document.getElementById('randlevel').value=2">
-                    <input type="button" value="Standard" onclick="document.getElementById('randtext').innerHTML='Standard';document.getElementById('randlevel').value=3">
-                    <input type="button" value="Disarray" onclick="document.getElementById('randtext').innerHTML='Disarray';document.getElementById('randlevel').value=4">
-                    <input type="button" value="Chaos" onclick="document.getElementById('randtext').innerHTML='Chaos';document.getElementById('randlevel').value=5">
-                </p>
-                <ul>
-                    <li>Randomness: <span id="randtext">Undefined</span><input id="randlevel" type="number" value="0" min="0"></li>
-                </ul>
-                <p>
+                    <label for="randlevel">Randomness:</label>
+                    <select name="randlevel" id="randlevel">
+                        <option value="0" selected>Undefined</option>
+                        <option value="1">Order</option>
+                        <option value="2">Calm</option>
+                        <option value="3">Standard</option>
+                        <option value="4">Disarray</option>
+                        <option value="5">Chaos</option>
+                    </select>
                     <input type="button" value="Roll!" onclick="createNPC(document.getElementById('randlevel').value)">
-                    <input type="button" value="Clear" onclick="document.getElementById('uneresult').innerHTML='Roll for NPC!';document.getElementById('randtext').innerHTML='Undefined';document.getElementById('randlevel').value=0">
+                    <input type="button" value="Clear" onclick="document.getElementById('uneresult').innerHTML='Roll for NPC!';document.getElementById('randlevel').value=0">
                 </p>
                 <p>
                     <b>Result:</b> <span id="uneresult">Roll for NPC!</span>
@@ -67,23 +75,20 @@
             <div>
                 <h2>🗨️ UNE NPC Topic Generator</h2>
                 <p>
-                    <span class="minor-header">Demeanor:</span>
-                    <input type="button" value="Random" onclick="document.getElementById('demtext').innerHTML='Random';document.getElementById('demnumb').value=0">
-                    <input type="button" value="Scheming" onclick="document.getElementById('demtext').innerHTML='Scheming';document.getElementById('demnumb').value=1">
-                    <input type="button" value="Insane" onclick="document.getElementById('demtext').innerHTML='Insane';document.getElementById('demnumb').value=2">
-                    <input type="button" value="Friendly" onclick="document.getElementById('demtext').innerHTML='Friendly';document.getElementById('demnumb').value=3">
-                    <input type="button" value="Hostile" onclick="document.getElementById('demtext').innerHTML='Hostile';document.getElementById('demnumb').value=4">
-                    <input type="button" value="Inquisitive" onclick="document.getElementById('demtext').innerHTML='Inquisitive';document.getElementById('demnumb').value=5">
-                    <input type="button" value="Knowing" onclick="document.getElementById('demtext').innerHTML='Knowing';document.getElementById('demnumb').value=6">
-                    <input type="button" value="Mysterious" onclick="document.getElementById('demtext').innerHTML='Mysterious';document.getElementById('demnumb').value=7">
-                    <input type="button" value="Prejudiced" onclick="document.getElementById('demtext').innerHTML='Prejudiced';document.getElementById('demnumb').value=8">
-                </p>
-                <ul>
-                    <li>Demeanor:<span id="demtext">Random</span><input type="number" value="0" min="0" id="demnumb"></li>
-                </ul>
-                <p>
+                    <label for="demnumb">Demeanor:</label>
+                    <select name="demnumb" id="demnumb">
+                        <option value="0" selected>Random</option>
+                        <option value="1">Scheming</option>
+                        <option value="2">Insane</option>
+                        <option value="3">Friendly</option>
+                        <option value="4">Hostile</option>
+                        <option value="5">Inquisitive</option>
+                        <option value="6">Knowing</option>
+                        <option value="7">Mysterious</option>
+                        <option value="8">Prejudiced</option>
+                    </select>
                     <input type="button" value="Roll!" onclick="topic(document.getElementById('demnumb').value)">
-                    <input type="button" value="Clear" onclick="document.getElementById('topic').innerHTML='Roll for topic!';document.getElementById('demnumb').value=0;document.getElementById('demtext').innerHTML='Random'">
+                    <input type="button" value="Clear" onclick="document.getElementById('topic').innerHTML='Roll for topic!';document.getElementById('demnumb').value=0;">
                 </p>
                 <p>
                     <b>Result:</b> <span id="topic">Roll for topic!</span>
@@ -93,21 +98,18 @@
             <div id="dialog">
                 <h2>🎭 UNE Dialog Mood Generator</h2>
                 <p>
-                    <span class="minor-header">Relationship with Speaker:</span>
-                    <input type="button" value="Loved" onclick="document.getElementById('relatetext').innerHTML='Loved';document.getElementById('relateval').value='loved'">
-                    <input type="button" value="Friendly" onclick="document.getElementById('relatetext').innerHTML='Friendly';document.getElementById('relateval').value='friendly'">
-                    <input type="button" value="Peaceful" onclick="document.getElementById('relatetext').innerHTML='Peaceful';document.getElementById('relateval').value='peaceful'">
-                    <input type="button" value="Neutral" onclick="document.getElementById('relatetext').innerHTML='Neutral';document.getElementById('relateval').value='neutral'">
-                    <input type="button" value="Distrustful" onclick="document.getElementById('relatetext').innerHTML='Distrustful';document.getElementById('relateval').value='distrustful'">
-                    <input type="button" value="Hostile" onclick="document.getElementById('relatetext').innerHTML='Hostile';document.getElementById('relateval').value='hostile'">
-                    <input type="button" value="Hated" onclick="document.getElementById('relatetext').innerHTML='Hated';document.getElementById('relateval').value='hated'">
-                </p>
-                <ul>
-                    <li>Relationship with Speaker: <span id="relatetext">Neutral</span><input id="relateval" type="text" value="neutral"></li>
-                </ul>
-                <p>
+                    <label for="relateval">Relationship with Speaker:</label>
+                    <select name="relateval" id="relateval">
+                        <option value="loved">Loved</option>
+                        <option value="friendly">Friendly</option>
+                        <option value="peaceful">Peaceful</option>
+                        <option value="neutral" selected>Neutral</option>
+                        <option value="distrustful">Distrustful</option>
+                        <option value="hostile">Hostile</option>
+                        <option value="hated">Hated</option>
+                    </select>
                     <input type="button" value="Roll!" onclick="npcMood(document.getElementById('relateval').value)">
-                    <input type="button" value="Clear" onclick="document.getElementById('relatetext').innerHTML='Neutral';document.getElementById('relateval').value='neutral';document.getElementById('moodresult').innerHTML='Roll for Mood!'">
+                    <input type="button" value="Clear" onclick="document.getElementById('relateval').value='neutral';document.getElementById('moodresult').innerHTML='Roll for Mood!'">
                 </p>
                 <p>
                     <b>Result:</b> <span id="moodresult">Roll for Mood!</span>
