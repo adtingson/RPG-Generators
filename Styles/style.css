@@ -1,5 +1,5 @@
 * {
-    font-family: "Scaly Sans", "Blobs", "Blobmoji";
+    font-family: "JetBrains Mono", "Blobs", "Blobmoji";
     color: #454545;
     font-size: 1rem;
 }
@@ -15,12 +15,10 @@ body {
 
 h1 {
     text-align: center;
-    font-family: FlatBread !important;
     color: #222;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: Nusaliver !important;
     color: #222;
 }
 
