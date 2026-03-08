@@ -78,3 +78,22 @@ function RaceStats(race) {
         document.getElementById("additionalRule").innerHTML = "Class Restrictions: Warrior 13+ STR; Mage 13+ INT";
     }
 }
+
+function statsInArray() {
+    const statArray = [];
+    const statArrayBonus = [];
+    const bonusPoints = ["-4", "-4", "-4", "-3", "-3", "-2", "-2", "-1", "-1", "+0", "+0", "+1", "+1", "+2", "+2", "+3", "+3", "+4"]
+    for (i=0; i<6; i++) {
+        var roll1=Math.floor(Math.random()*6)+1;
+        var roll2=Math.floor(Math.random()*6)+1;
+        var roll3=Math.floor(Math.random()*6)+1;
+        var rollTotal=roll1+roll2+roll3;
+        statArray.push(rollTotal);
+        statArray.sort((a,b,)=>b-a);
+    }
+    for (i=0; i<6; i++) {
+        var resultPush = "<b>" + statArray[i] + "[" + bonusPoints[statArray[i]-1] + "]</b>";
+        statArrayBonus.push(resultPush);
+    }
+    document.getElementById("scoresStat").innerHTML = statArrayBonus;
+}

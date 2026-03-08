@@ -130,17 +130,12 @@
             <div>
                 <h2>💪 Ability Scores</h2>
                     <p>
-                        <input type="button" value="Roll!" onclick="RaceStats(1)">
-                        <input type="button" value="Clear"  onclick="document.getElementById('strScore').innerHTML='Roll Stats!';document.getElementById('dexScore').innerHTML='Roll Stats!';document.getElementById('conScore').innerHTML='Roll Stats!';document.getElementById('intScore').innerHTML='Roll Stats!';document.getElementById('wisScore').innerHTML='Roll Stats!';document.getElementById('chaScore').innerHTML='Roll Stats!';">
+                        <input type="button" value="Roll!" onclick="statsInArray()">
+                        <input type="button" value="Clear"  onclick="document.getElementById('scoresStat').innerHTML='Roll Stats!'">
                     </p>
                     <p>
                         <ul>
-                            <li>STR: <span id="strScore">Roll Stats!</span></li>
-                            <li>DEX: <span id="dexScore">Roll Stats!</span></li>
-                            <li>CON: <span id="conScore">Roll Stats!</span></li>
-                            <li>INT: <span id="intScore">Roll Stats!</span></li>
-                            <li>WIS: <span id="wisScore">Roll Stats!</span></li>
-                            <li>CHA: <span id="chaScore">Roll Stats!</span></li>
+                            <li id="scoresStat">Roll Stats!</li>
                         </ul>
                     </p>
             </div>
