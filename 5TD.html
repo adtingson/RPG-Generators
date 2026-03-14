@@ -13,54 +13,54 @@
         <script type="text/javascript" src="Generators/5td-sundriesTable.js"></script>
         <script type="text/javascript" src="Generators/5td-inspirationGen.js"></script>
     </head>
+    <header>
+        <h1>Five Torches Deep Generators</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul>
+                        <li class="activepage">
+                            <a href="5TD.html">Five Torches Deep Tables and Generators</a>
+                            <ul class="dropdown">
+                                <li><a href="Common.html">Commonly Used Generators</a></li>
+                                <li><a href="CRGE.html">CRGE, UNE, and Bold</a></li>
+                                <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <body>
-        <div id="wrapper">
-            <h1>Five Torches Deep Generators</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li class="activepage">
-                                <a href="5TD.html">Five Torches Deep Tables and Generators</a>
-                                <ul class="activepage-drop">
-                                    <li><a href="Common.html">Commonly Used Generators</a></li>
-                                    <li><a href="CRGE.html">CRGE, UNE, and Bold</a></li>
-                                    <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <hr>
-            <div id="abilityScores">
+        <main>
+            <section>
                 <h2>💪 Ability Scores</h2>
-                    <p>
-                        <label for="raceCounter">PC Race:</label>
-                        <select name="raceCounter" id="raceCounter">
-                            <option value="1" selected>Human</option>
-                            <option value="2">Dwarf</option>
-                            <option value="3">Elf</option>
-                            <option value="4">Halfling</option>
-                        </select>
-                        <input type="button" value="Roll!" onclick="RaceStats(document.getElementById('raceCounter').value)">
-                        <input type="button" value="Clear"  onclick="document.getElementById('raceCounter').value='1';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='Additional Class Rules';">
-                    </p>
-                    <p>
-                        <ul>
-                            <li>STR: <span id="strScore">Set Race and Roll!</span></li>
-                            <li>DEX: <span id="dexScore">Set Race and Roll!</span></li>
-                            <li>CON: <span id="conScore">Set Race and Roll!</span></li>
-                            <li>INT: <span id="intScore">Set Race and Roll!</span></li>
-                            <li>WIS: <span id="wisScore">Set Race and Roll!</span></li>
-                            <li>CHA: <span id="chaScore">Set Race and Roll!</span></li>
-                        </ul>
-                        <span id="additionalRule">Additional Class Rules</span>
-                    </p>
-            </div>
-            <hr>
-            <div id="SundriesSection">
+                <p>
+                    <label for="raceCounter">PC Race:</label>
+                    <select name="raceCounter" id="raceCounter">
+                        <option value="1" selected>Human</option>
+                        <option value="2">Dwarf</option>
+                        <option value="3">Elf</option>
+                        <option value="4">Halfling</option>
+                    </select>
+                    <input type="button" value="Roll!" onclick="RaceStats(document.getElementById('raceCounter').value)">
+                    <input type="button" value="Clear"  onclick="document.getElementById('raceCounter').value='1';document.getElementById('strScore').innerHTML='Set Race and Roll!';document.getElementById('dexScore').innerHTML='Set Race and Roll!';document.getElementById('conScore').innerHTML='Set Race and Roll!';document.getElementById('intScore').innerHTML='Set Race and Roll!';document.getElementById('wisScore').innerHTML='Set Race and Roll!';document.getElementById('chaScore').innerHTML='Set Race and Roll!';document.getElementById('additionalRule').innerHTML='Additional Class Rules';">
+                </p>
+                <p>
+                    <ul>
+                        <li>STR: <span id="strScore">Set Race and Roll!</span></li>
+                        <li>DEX: <span id="dexScore">Set Race and Roll!</span></li>
+                        <li>CON: <span id="conScore">Set Race and Roll!</span></li>
+                        <li>INT: <span id="intScore">Set Race and Roll!</span></li>
+                        <li>WIS: <span id="wisScore">Set Race and Roll!</span></li>
+                        <li>CHA: <span id="chaScore">Set Race and Roll!</span></li>
+                    </ul>
+                    <span id="additionalRule">Additional Class Rules</span>
+                </p>
+            </section>
+            <section>
                 <h2>🎒 Sundries</h2>
                 <p>
                     How many sundries to roll?
@@ -74,9 +74,8 @@
                         <li>Roll first! LOL</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div id="randomMap">
+            </section>
+            <section>
                 <h2>🗺️ Random Maps</h2>
                 <p>
                     <input type="button" value="Generate Map!" onclick="generateMAP();">
@@ -104,9 +103,8 @@
                         <li><b>Red</b>: blocked or locked, can't travel by any normal means (door, wall, etc)</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div id="inspoGenerator">
+            </section>
+            <section>
                 <h2>🌟 Adventure/Landmark Inspiration</h2>
                 <p>
                     <input type="button" value="Generate!" onclick="inspoGen()">
@@ -115,9 +113,8 @@
                         <li id="inspoRes">Generate new!</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div id="descriptSect">
+            </section>
+            <section>
                 <h2>🔎 Descriptors</h2>
                 <p>
                     Roll for descriptors.
@@ -131,11 +128,10 @@
                         <li><b>Sensory: </b><span id="senseDesc"></span></li>
                     </ul>
                 </p>
-            </div>
-            <hr>
+            </section>
             <footer>
                 Created by Albert. 2026.
             </footer>
-        </div>
+        </main>
     </body>
 </html>

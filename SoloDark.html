@@ -10,28 +10,29 @@
         <link rel="stylesheet" href="Styles/Blobmoji.css">
         <script type="text/javascript" src="Generators/SD-SoloDark.js"></script>
     </head>
+    <header>
+        <h1>SoloDark for ShadowDark RPG</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul>
+                        <li class="activepage">
+                            <a href="SoloDark.html">SoloDark for ShadowDark RPG</a>
+                            <ul class="dropdown">
+                                <li><a href="Common.html">Commonly Used Generators</a></li>
+                                <li><a href="CRGE.html">CRGE, UNE, and BOLD</a></li>
+                                <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <body>
-        <div id="wrapper">
-            <h1>SoloDark for ShadowDark RPG</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li class="activepage">
-                                <a href="SoloDark.html">SoloDark for ShadowDark RPG</a>
-                                <ul class="activepage-drop">
-                                    <li><a href="Common.html">Commonly Used Generators</a></li>
-                                    <li><a href="CRGE.html">CRGE, UNE, and BOLD</a></li>
-                                    <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <hr>
-            <div>
+        <main>
+            <section>
                 <h2>😈 Dungeon Name</h2>
                 <p>
                     <input type="button" value="Generate!" onclick="DungeonName();">
@@ -40,9 +41,8 @@
                         <li id="dungeonName">Generate adventure!</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div>
+            </section>
+            <section>
                 <h2>🔮 Oracle</h2>
                 <p>
                     <label for="oddsValue">Odds:</label>
@@ -65,11 +65,10 @@
                         <li id="promptText">Generate prompt!</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
+            </section>
             <footer>
                 Created by Albert. 2026.
             </footer>
-        </div>
+        </main>
     </body>
 </html>

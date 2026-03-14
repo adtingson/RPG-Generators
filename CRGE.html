@@ -13,28 +13,29 @@
         <script type="text/javascript" src="Generators/mood.js"></script>
         <script type="text/javascript" src="Generators/createChallenge.js"></script>
     </head>
+    <header>
+        <h1>CRGE, UNE, and BOLD</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul>
+                        <li class="activepage">
+                            <a href="CRGE.html">CRGE, UNE, and BOLD</a>
+                            <ul class="dropdown">
+                                <li><a href="Common.html">Commonly Used Generators</a></li>
+                                <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                                <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <body>
-        <div id="wrapper">
-            <h1>CRGE, UNE, and BOLD</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li class="activepage">
-                                <a href="CRGE.html">CRGE, UNE, and BOLD</a>
-                                <ul class="activepage-drop">
-                                    <li><a href="Common.html">Commonly Used Generators</a></li>
-                                    <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
-                                    <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <hr>
-            <div id="fate">
+        <main>
+            <section>
                 <h2>🎲 CRGE Fate Rolls</h2>
                 <p>
                     <label for="stageCounter">Set Stage:</label>
@@ -51,9 +52,8 @@
                 <p>
                     <b>Result:</b> <span id="crgeresult">Set stage, then roll for value!</span>
                 </p>
-            </div>
-            <hr>
-            <div id="npc">
+            </section>
+            <section>
                 <h2>🧑 UNE NPC Generator</h2>
                 <p>
                     <label for="randlevel">Randomness:</label>
@@ -71,9 +71,8 @@
                 <p>
                     <b>Result:</b> <span id="uneresult">Roll for NPC!</span>
                 </p>
-            </div>
-            <hr>
-            <div>
+            </section>
+            <section>
                 <h2>🗨️ UNE NPC Topic Generator</h2>
                 <p>
                     <label for="demnumb">Demeanor:</label>
@@ -94,9 +93,8 @@
                 <p>
                     <b>Result:</b> <span id="topic">Roll for topic!</span>
                 </p>
-            </div>
-            <hr>
-            <div id="dialog">
+            </section>
+            <section>
                 <h2>🎭 UNE Dialog Mood Generator</h2>
                 <p>
                     <label for="relateval">Relationship with Speaker:</label>
@@ -115,9 +113,8 @@
                 <p>
                     <b>Result:</b> <span id="moodresult">Roll for Mood!</span>
                 </p>
-            </div>
-            <hr>
-            <div id="BOLD">
+            </section>
+            <section>
                 <h2>✊ BOLD Random Challenge Generator</h2>
                 <p>
                     <input type="button" value="Roll!" onclick="waylays()">
@@ -126,11 +123,10 @@
                 <p>
                     <b>Result:</b> <span id="waylays">Roll for Challenge!</span>
                 </p>
-            </div>
-            <hr>
+            </section>
             <footer>
                 Created by Albert. 2025.
             </footer>
-        </div>
+        </main>
     </body>
 </html>

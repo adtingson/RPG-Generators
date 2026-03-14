@@ -13,28 +13,29 @@
         <script type="text/javascript" src="Generators/5td-mapGenerator.js"></script>
         <script type="text/javascript" src="Generators/5td-inspirationGen.js"></script>
     </head>
+    <header>
+        <h1>Commonly Used Generators</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul>
+                        <li class="activepage">
+                            <a href="Common.html">Commonly Used Generators</a>
+                            <ul class="dropdown">
+                                <li><a href="CRGE.html">CRGE, UNE, and BOLD</a></li>
+                                <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                                <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <body>
-        <div id="wrapper">
-            <h1>Commonly Used Generators</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li class="activepage">
-                                <a href="Common.html">Commonly Used Generators</a>
-                                <ul class="activepage-drop">
-                                    <li><a href="CRGE.html">CRGE, UNE, and BOLD</a></li>
-                                    <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
-                                    <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <hr>
-            <div>
+        <main>
+            <section>
                 <h2>🔮 Oracle</h2>
                 <p>
                     <label for="oddsValue">Odds:</label>
@@ -57,9 +58,8 @@
                         <li id="promptText">Generate prompt!</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div>
+            </section>
+            <section>
                 <h2>😈 Dungeon Name</h2>
                 <p>
                     <input type="button" value="Generate!" onclick="DungeonName();">
@@ -68,81 +68,22 @@
                         <li id="dungeonName">Generate adventure!</li>
                     </ul>
                 </p>
-            </div>
-            <hr>
-            <div>
-                <h2>🗺️ Random Maps</h2>
-                <p>
-                    <input type="button" value="Generate Map!" onclick="generateMAP();">
-                    <input type="button" value="Clear" onclick="clearMAP();">
-                    <div id="boxMap">
-                        <div id="map1"></div>
-                        <div id="map2"></div>
-                        <div id="map3"></div>
-                        <div id="map4"></div>
-                        <div id="map5"></div>
-                        <div id="map6"></div>
-                        <div id="map7"></div>
-                        <div id="map8"></div>
-                        <div id="map9"></div>
-                    </div>
-                </p>
-                <p>
-                    <h3>Legend:</h3>
-                    <ul>
-                        <li><b>White</b>: open path, entrance, or clearing</li>
-                        <li><b>Blue</b>: alternative path (water, ascent)</li>
-                        <li><b>Green</b>: a key destination (treasure)</li>
-                        <li><b>Yellow</b>: passive threat, hazards, terrain</li>
-                        <li><b>Orange</b>: danger, enemy convergences</li>
-                        <li><b>Red</b>: blocked or locked, can't travel by any normal means (door, wall, etc)</li>
-                    </ul>
-                </p>
-            </div>
-            <hr>
-            <div>
-                <h2>🌟 Adventure/Landmark Inspiration</h2>
-                <p>
-                    <input type="button" value="Generate!" onclick="inspoGen()">
-                    <input type="button" value="Clear" onclick="document.getElementById('inspoRes').innerHTML = 'Generate new!';">
-                    <ul>
-                        <li id="inspoRes">Generate new!</li>
-                    </ul>
-                </p>
-            </div>
-            <hr>
-            <div>
-                <h2>🔎 Descriptors</h2>
-                <p>
-                    Roll for descriptors.
-                    <input type="button" value="Roll!" onclick="descGen();">
-                    <input type="button" value="Clear" onclick="clearDesc();">
-                    <ul>
-                        <li><b>Nature: </b><span id="natureDesc"></span></li>
-                        <li><b>Action: </b><span id="actionDesc"></span></li>
-                        <li><b>Material: </b><span id="materDesc"></span></li>
-                        <li><b>Emotion: </b><span id="emoteDesc"></span></li>
-                        <li><b>Sensory: </b><span id="senseDesc"></span></li>
-                    </ul>
-                </p>
-            </div>
-            <hr>
-            <div>
+            </section>
+            <section>
                 <h2>💪 Ability Scores</h2>
-                    <p>
-                        <input type="button" value="Roll!" onclick="statsInArray()">
-                        <input type="button" value="Clear"  onclick="document.getElementById('scoresStat').innerHTML='Roll Stats!'">
-                    </p>
-                    <p>
-                        <ul>
-                            <li id="scoresStat">Roll Stats!</li>
-                        </ul>
-                    </p>
-            </div>
-            <hr>
+                <p>
+                    <input type="button" value="Roll!" onclick="statsInArray()">
+                    <input type="button" value="Clear"  onclick="document.getElementById('scoresStat').innerHTML='Roll Stats!'">
+                </p>
+                <p>
+                    <ul>
+                        <li id="scoresStat">Roll Stats!</li>
+                    </ul>
+                </p>  
+            </section>
             <footer>
                 Created by Albert. 2026.
             </footer>
-        </div>
+        </main>
     </body>
 </html>

@@ -45,6 +45,13 @@ p {
     margin: 1rem 0;
 }
 
+header,
+section {
+    border-bottom: 1px solid grey;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 footer {
     margin: 2rem 0;
 }
@@ -86,6 +93,7 @@ li {
 
 nav ul {
     padding: 0;
+    margin: 0;
 }
 
 nav ul li ul li::before {
@@ -108,17 +116,19 @@ nav ul li ul {
     position: relative;
 }
 
-.activepage-drop {
+.dropdown {
     position: absolute;
     top: 100%;
     left: -1em;
     background-color: white;
     z-index: 1;
     box-shadow: 0px 5px 5px gray;
-    display: none;
+    visibility: hidden;
     padding-bottom: 1em;
     padding-right: 2em;
     width: 100%;
+    max-height: 0;
+    transition: max-height 1s ease-out;
 }
 
 label {
@@ -126,8 +136,9 @@ label {
     font-weight: bolder;
 }
 
-.activepage:hover > .activepage-drop {
-    display: block;
+.activepage:hover > .dropdown {
+    visibility: visible;
+    max-height: 300px;
 }
 
 input[type="number"] {
@@ -135,8 +146,25 @@ input[type="number"] {
     text-align: center;
 }
 
+input[type="button"],
+button {
+    background-color: transparent;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid grey;
+}
+
+select {
+    border: 1px solid grey;
+    padding: 1px 0;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 616px) {
-    #wrapper {
+    main {
         margin: 0 1rem;
     }
 
