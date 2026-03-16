@@ -37,7 +37,9 @@
                 <h2>Fate Questions</h2>
                 <p>
                     <label for="chaosFactor">Chaos Factor:</label>
+                    <button onclick="chaosAdjust(-1)">-</button>
                     <input type="number" name="chaosFactor" id="chaosFactor" value="5" min="1" max="9">
+                    <button onclick="chaosAdjust(+1)">+</button>
                     <br>
                     <label for="Odds">Odds:</label>
                     <select name="Odds" id="Odds">
@@ -52,37 +54,33 @@
                         <option value="8">Certain</option>
                     </select>
                     <br>
-                    <label for="randomFocus">Focus:</label>
+                    <label for="randomFocus">Event Meaning:</label>
                     <select name="randomFocus" id="randomFocus">
-                        <option value="0">Action</option>
+                        <option value="0" selected>Action</option>
                         <option value="1">Description</option>
+                        <option value="2">Location</option>
+                        <option value="3">Character</option>
+                        <option value="4">Object</option>
                     </select>
-                    <input type="button" value="Roll" onclick="FateCheck(document.getElementById('chaosFactor').value-1,document.getElementById('Odds').value,document.getElementById('randomFocus').value);">
-                    <input type="button" value="Clear" onclick="document.getElementById('resultRoll').innerHTML='';document.getElementById('Odds').value='4';">
                     <br>
-                    <label for="resultRoll">Result:</label>
-                    <span id="resultRoll" name="resultRoll"></span>
-                </p>
-            </section>
-            <section>
-                <h2>Generate Random Events</h2>
-                <p>
-                    Refer to the <i>Focus</i> above.
-                    <input type="button" value="Roll" onclick="justTheRandomEvent(document.getElementById('randomFocus').value);">
-                    <input type="button" value="Clear" onclick="document.getElementById('resultRoll2').innerHTML='';">
-                    <br>
-                    <label for="resultRoll2">Result:</label>
-                    <span id="resultRoll2" name="resultRoll2"></span>
-                </p>
-            </section>
-            <section>
-                <h2>Check Expected Scene</h2>
-                <p>
-                    Refer to <i>Chaos Factor</i> above.
-                    <input type="button" value="Roll" onclick="expectedSceneCheck(document.getElementById('chaosFactor').value);">
-                    <input type="button" value="Clear" onclick="document.getElementById('testExpected').innerHTML='';">
-                    <br>
-                    <b>Result:</b> <span id="testExpected"></span>
+                    <b>Answer Question:</b>
+                    <input type="button" value="Roll" onclick="document.getElementById('fateQuestionResult').innerHTML=FateCheck(document.getElementById('chaosFactor').value, document.getElementById('Odds').value, document.getElementById('randomFocus').value);">
+                    <input type="button" value="Clear" onclick="document.getElementById('fateQuestionResult').innerHTML=''">
+                    <ul>
+                        <li id="fateQuestionResult"></li>
+                    </ul>
+                    <b>Check Expected Scene:</b>
+                    <input type="button" value="Roll" onclick="document.getElementById('checkSceneResult').innerHTML=expectedSceneCheck(document.getElementById('chaosFactor').value, document.getElementById('randomFocus').value);">
+                    <input type="button" value="Clear" onclick="document.getElementById('checkSceneResult').innerHTML=''">
+                    <ul>
+                        <li id="checkSceneResult"></li>
+                    </ul>
+                    <b>Random Event:</b>
+                    <input type="button" value="Roll" onclick="document.getElementById('randomEventResult').innerHTML=randomEventGen(document.getElementById('randomFocus').value)">
+                    <input type="button" value="Clear" onclick="document.getElementById('randomEventResult').innerHTML=''">
+                    <ul>
+                        <li id="randomEventResult"></li>
+                    </ul>
                 </p>
             </section>
             <footer>
