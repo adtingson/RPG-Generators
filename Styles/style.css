@@ -131,6 +131,10 @@ nav ul li ul {
     transition: max-height 1s ease-out;
 }
 
+.optbreak {
+    display: none;
+}
+
 label {
     color: #862D2D;
     font-weight: bolder;
@@ -138,7 +142,7 @@ label {
 
 .activepage:hover > .dropdown {
     visibility: visible;
-    max-height: 300px;
+    max-height: 500px;
 }
 
 input[type="number"] {
@@ -178,5 +182,21 @@ select {
 
     .not-list + p {
         padding-top: 0;
+    }
+
+    header {
+        margin: 0 1em;
+    }
+
+    .optbreak {
+        display: block;
+    }
+
+    nav {
+        overflow-wrap: break-word;
+    }
+
+    nav ul li ul {
+        min-width: auto;
     }
 }

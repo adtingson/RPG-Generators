@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mythic 2e</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Styles/JetBrains Mono.css">
+        <link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="Styles/Blobmoji.css">
+        <script type="text/javascript" src="Generators/mythic2e.js"></script>
+    </head>
+    <header>
+        <h1>Mythic 2e Oracles</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul>
+                        <li class="activepage">
+                            <a href="mythic.html">Mythic 2e Oracles</a>
+                            <ul class="dropdown">
+                                <li><a href="Common.html">Commonly Used Generators</a></li>
+                                <li><a href="CRGE.html">CRGE, UNE, and BOLD</a></li>
+                                <li><a href="5TD.html">Five Torches Deep Tables and Generators</a></li>
+                                <li><a href="SoloDark.html">SoloDark for ShadowDark RPG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <main>
+            <section>
+                <h2>Fate Questions</h2>
+                <p>
+                    <label for="chaosFactor">Chaos Factor:</label>
+                    <input type="number" name="chaosFactor" id="chaosFactor" value="5" min="1" max="9">
+                    <br>
+                    <label for="Odds">Odds:</label>
+                    <select name="Odds" id="Odds">
+                        <option value="0">Impossible</option>
+                        <option value="1">Nearly Impossible</option>
+                        <option value="2">Very Unlikely</option>
+                        <option value="3">Unlikely</option>
+                        <option value="4" selected>50/50</option>
+                        <option value="5">Likely</option>
+                        <option value="6">Very Likely</option>
+                        <option value="7">Nearly Certain</option>
+                        <option value="8">Certain</option>
+                    </select>
+                    <br>
+                    <label for="randomFocus">Focus:</label>
+                    <select name="randomFocus" id="randomFocus">
+                        <option value="0">Action</option>
+                        <option value="1">Description</option>
+                    </select>
+                    <input type="button" value="Roll" onclick="FateCheck(document.getElementById('chaosFactor').value-1,document.getElementById('Odds').value,document.getElementById('randomFocus').value);">
+                    <input type="button" value="Clear" onclick="document.getElementById('resultRoll').innerHTML='';document.getElementById('Odds').value='4';">
+                    <br>
+                    <label for="resultRoll">Result:</label>
+                    <span id="resultRoll" name="resultRoll"></span>
+                </p>
+            </section>
+            <section>
+                <h2>Generate Random Events</h2>
+                <p>
+                    Refer to the <i>Focus</i> above.
+                    <input type="button" value="Roll" onclick="justTheRandomEvent(document.getElementById('randomFocus').value);">
+                    <input type="button" value="Clear" onclick="document.getElementById('resultRoll2').innerHTML='';">
+                    <br>
+                    <label for="resultRoll2">Result:</label>
+                    <span id="resultRoll2" name="resultRoll2"></span>
+                </p>
+            </section>
+            <section>
+                <h2>Check Expected Scene</h2>
+                <p>
+                    Refer to <i>Chaos Factor</i> above.
+                    <input type="button" value="Roll" onclick="expectedSceneCheck(document.getElementById('chaosFactor').value);">
+                    <input type="button" value="Clear" onclick="document.getElementById('testExpected').innerHTML='';">
+                    <br>
+                    <b>Result:</b> <span id="testExpected"></span>
+                </p>
+            </section>
+            <footer>
+                Created by Albert. 2026.
+            </footer>
+        </main>
+    </body>
+</html>

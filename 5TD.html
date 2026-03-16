@@ -65,6 +65,7 @@
                 <p>
                     How many sundries to roll?
                     <input type="number" min="1" id="sundryNumber" value="1">
+                    <br class="optbreak">
                     <input type="button" value="Roll!" onclick="document.getElementById('sundriesCreated').innerHTML='';rollSundries(document.getElementById('sundryNumber').value)">
                     <input type="button" value="Clear" onclick="document.getElementById('sundryNumber').value='1';document.getElementById('sundriesCreated').innerHTML='<li>Roll first! LOL</li>'">
                 </p>
@@ -118,6 +119,7 @@
                 <h2>🔎 Descriptors</h2>
                 <p>
                     Roll for descriptors.
+                    <br class="optbreak">
                     <input type="button" value="Roll!" onclick="descGen();">
                     <input type="button" value="Clear" onclick="clearDesc();">
                     <ul>
