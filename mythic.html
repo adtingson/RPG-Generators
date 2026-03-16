@@ -65,7 +65,7 @@
                     <br>
                     <b>Answer Question:</b>
                     <input type="button" value="Roll" onclick="document.getElementById('fateQuestionResult').innerHTML=FateCheck(document.getElementById('chaosFactor').value, document.getElementById('Odds').value, document.getElementById('randomFocus').value);">
-                    <input type="button" value="Clear" onclick="document.getElementById('fateQuestionResult').innerHTML=''">
+                    <input type="button" value="Clear" onclick="document.getElementById('fateQuestionResult').innerHTML='';document.getElementById('Odds').value='4'">
                     <ul>
                         <li id="fateQuestionResult"></li>
                     </ul>
