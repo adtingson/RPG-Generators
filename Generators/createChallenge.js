@@ -183,10 +183,27 @@ function waylays() {
             }
         }
     }
+    let result = modifier + " " + noun();
+    return result;
+}
 
-    var result = modifier + " " + noun();
+function normalWaylay() {
+    let result = waylays() + " overcome by " + waylaySolution();
+    return result;
+}
 
-    // console.log(result);
+function waylaySolution() {
+    const solutionTable = ["legendary help", "act of nature", "the people", "enemy help", "avoidance", "scarce-used ability", "personal resources", "close friend", "strong attribute", "favored ability", "favored skill", "on accident", "weak attribute", "counteraction", "faction intervention", "the authority", "fate", "change of heart", "deus ex"];
+    return solutionTable[Math.floor(Math.random()*10) + Math.floor(Math.random()*10)];
+}
 
-    document.getElementById("waylays").innerHTML = result;
+function arcedWaylay() {
+    let theme = waylays();
+    let exposition = normalWaylay();
+    let risingaction = normalWaylay();
+    let climax = normalWaylay();
+    document.getElementById("arcedTheme").innerHTML = theme;
+    document.getElementById("arcedExposition").innerHTML = exposition;
+    document.getElementById("arcedAction").innerHTML = risingaction;
+    document.getElementById("arcedClimax").innerHTML = climax;
 }

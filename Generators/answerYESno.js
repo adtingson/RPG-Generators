@@ -123,3 +123,15 @@ function loomFate(stage,surge) {
 		document.getElementById("surgeCount").value = 0;
 	}
 }
+
+function changeSurge(number) {
+	let surge = document.getElementById("surgeCount").value;
+	let result = +surge + +number;
+	switch (true) {
+		case result<=0:
+			document.getElementById("surgeCount").value = 0;
+			break;
+		default:
+			document.getElementById("surgeCount").value = result;
+	}
+}
