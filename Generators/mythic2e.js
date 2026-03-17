@@ -18,7 +18,7 @@ function alterAdjustments() {
             return adjustmentTable[roll];
             break;
         default:
-            return adjustmentTable[roll] + " " + adjustmentTable[roll];
+            return adjustmentTable[Math.floor(Math.random()*6)] + " " + adjustmentTable[Math.floor(Math.random()*6)];
     }
 }
 
