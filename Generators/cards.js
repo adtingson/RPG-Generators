@@ -16,7 +16,7 @@ function random(array) {
 
 function draw(cards) {
     if (!shuffled?.length) {
-        return "No more cards!";
+        return `<i>No more cards!</i>`;
     }
 
     let hand = [];
@@ -33,7 +33,7 @@ function draw(cards) {
 function shuffle() {
     shuffled = [...deck];
     document.getElementById("left").innerHTML = `${shuffled.length}`;
-    document.getElementById("drawn").innerHTML = "Shuffled!";
+    document.getElementById("drawn").innerHTML = `<i>Shuffled</i>`;
 }
 
 function log(cards) {

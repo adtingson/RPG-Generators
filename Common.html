@@ -59,9 +59,23 @@
                     <input type="number" min="1" max="54" value="1" id="cards">
                     <button onclick="log(document.getElementById('cards').value)">Draw</button>
                     <button onclick="shuffle()">Shuffle</button>
-                    <span id="left"></span><span> left</span>
-                    <div id="drawn"><i>Draw!</i></div>
                 </p>
+                <p>
+                    <span id="left"></span><span id="drawn"><i>Draw!</i></span>
+                </p>
+            </section>
+            <section>
+                <h2>🎲 Dice</h2>
+                <p>
+                    <button onclick="roll(4, dice)">d4</button>
+                    <button onclick="roll(6, dice)">d6</button>
+                    <button onclick="roll(8, dice)">d8</button>
+                    <button onclick="roll(10, dice)">d10</button>
+                    <button onclick="roll(12, dice)">d12</button>
+                    <button onclick="roll(20, dice)">d20</button>
+                    <button onclick="roll(100, dice)">d100</button>
+                </p>
+                <p id="dice"><i>Roll</i></p>
             </section>
             <footer>
                 Created by Albert. 2026.
@@ -70,5 +84,6 @@
 
         <script src="Generators/cards.js" defer></script>
         <script src="Generators/answerYESno.js" defer></script>
+        <script src="Generators/dice.js" defer></script>
     </body>
 </html>
