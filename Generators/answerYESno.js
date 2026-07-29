@@ -5,24 +5,30 @@ Stages: 1-To Knowledge, 2-To Conflict, 3-To Endings.
 Surge: System defined modifier for randomness. Starts at 0.
 */
 
-function loomFate(stage,surge) {
-	var loomRoll = Math.floor(Math.random()*100)+1;
-	var roll1 = loomRoll1();
-	var roll2 = Math.floor(Math.random()*17)+1;
+const surge = document.getElementById("surgeCount");
+const display = document.getElementById("crgeresult");
+
+function loomFate() {
+	const stage = Number(document.getElementById('stageCounter').value);
+	let mod = Number(surge.value);
+	
+	let loomRoll = Math.floor(Math.random()*100)+1;
+	let roll1 = loomRoll1();
+	let roll2 = Math.floor(Math.random()*17)+1;
 	
 	function loomRoll1() {
 		if (loomRoll>50) {
-			return +loomRoll + +surge;
+			return loomRoll + mod;
 		}
 		else if (loomRoll<=50) {
-			return +loomRoll - +surge;
+			return loomRoll - mod;
 		}
 	}
 	
 	function table1() {
 		if (stage==1) {
 			if (roll1>=96) {
-				return "Yes, and unexpectedly... " + table2();
+				return `Yes, and unexpectedly...<br>${table2()}`;
 			}
 			else if (roll1>=86 && roll1<=95) {
 				return "Yes, but... ";
@@ -43,12 +49,12 @@ function loomFate(stage,surge) {
 				return "No, but... ";
 			}
 			else if (roll1<=5) {
-				return "No, and unexpectedly... " + table2();
+				return `No, and unexpectedly...<br>${table2()}`;
 			}
 		}
 		else if (stage==2) {
 			if (roll1>=99) {
-				return "Yes, and unexpectedly... " + table2();
+				return `Yes, and unexpectedly...<br>${table2()}`;
 			}
 			else if (roll1>=95 && roll1<=98) {
 				return "Yes, but... ";
@@ -69,12 +75,12 @@ function loomFate(stage,surge) {
 				return "No, but... ";
 			}
 			else if (roll1<=2) {
-				return "No, and unexpectedly... " + table2();
+				return `No, and unexpectedly...<br>${table2()}`;
 			}
 		}
 		else if (stage==3) {
 			if (roll1>=100) {
-				return "Yes, and unexpectedly... " + table2();
+				return `Yes, and unexpectedly...<br>${table2()}`;
 			}
 			else if (roll1==99) {
 				return "Yes, but... ";
@@ -95,7 +101,7 @@ function loomFate(stage,surge) {
 				return "No, but... ";
 			}
 			else if (roll1<=1) {
-				return "No, and unexpectedly... " + table2();
+				return `No, and unexpectedly...<br>${table2()}`;
 			}
 		}
 		else if (stage==0) {
@@ -108,30 +114,65 @@ function loomFate(stage,surge) {
 		return tab2Vals[roll2-1];
 	}
 	
-	var result = table1();
+	let result = table1();
 
-	if(result=="Yes."){
-		document.getElementById("crgeresult").innerHTML = result;
-		document.getElementById("surgeCount").value = +document.getElementById("surgeCount").value + 2;
-	}
-	else if(result=="No."){
-		document.getElementById("crgeresult").innerHTML = result;
-		document.getElementById("surgeCount").value = +document.getElementById("surgeCount").value + 2;
-	}
-	else {
-		document.getElementById("crgeresult").innerHTML = result;
-		document.getElementById("surgeCount").value = 0;
-	}
+	return result;
 }
 
 function changeSurge(number) {
-	let surge = document.getElementById("surgeCount").value;
-	let result = +surge + +number;
+	let mod = Number(surge.value);
+	let result = mod + number;
+
 	switch (true) {
 		case result<=0:
-			document.getElementById("surgeCount").value = 0;
+			surge.value = 0;
 			break;
 		default:
-			document.getElementById("surgeCount").value = result;
+			surge.value = result;
 	}
+}
+
+let generating = false;
+
+function renderFate() {
+	if (generating) {
+		return;
+	}
+	generating = true;
+
+	let result = loomFate();
+	let mod = Number(surge.value);
+
+	const characters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "/", "\\", ":", ";", "?", "<", ">", ",", ".", "[", "]", "{", "}", "|", "`", "~"];
+
+	function rando() {
+		let randomIndex = Math.floor(Math.random() * characters.length);
+		return characters[randomIndex];
+	}
+
+	let frame = 0;
+	let delay = 10;
+
+	function animate() {
+		frame++;
+
+		if (frame < 12) {
+			display.innerHTML = `${rando()}${rando()}${rando()}${rando()}${rando()}`;
+			delay += 18;
+			setTimeout(animate, delay);
+		}
+		else {
+			display.innerHTML = result;
+			if(result=="Yes." || result=="No."){
+				mod += 2;
+				surge.value = mod;
+			}
+			else {
+				surge.value = 0;
+			}
+			generating = false;
+		}
+	}
+
+	animate();
 }
