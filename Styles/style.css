@@ -11,6 +11,24 @@ html {
 body {
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+}
+
+body::before {
+    background-image: url("paper.png");
+    content: "";
+    background-repeat: repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    mix-blend-mode: multiply;
+    z-index: 1;
+    pointer-events: none;
 }
 
 h1 {
