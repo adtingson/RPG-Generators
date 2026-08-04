@@ -4,6 +4,7 @@
     --black: #222;
     --red: #862D2D;
     --blend: multiply;
+    --opacity: 1;
 }
 
 * {
@@ -23,16 +24,25 @@ body {
     background-color: var(--white);
 }
 
-body::before {
-    background-image: url("paper.png");
+body::before,
+body::after {
     content: "";
-    background-repeat: repeat;
-    background-position: center;
     position: fixed;
     inset: 0;
     pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background-image: url("image.png");
+    background-repeat: repeat;
+    opacity: var(--opacity);
+    mix-blend-mode: normal;
+}
+
+body::after {
+    background-color: var(--white);
     mix-blend-mode: var(--blend);
-    z-index: 2;
 }
 
 h1 {
@@ -221,6 +231,10 @@ input, select {
     background-color: transparent;
 }
 
+option {
+    background-color: var(--white);
+}
+
 @media screen and (max-width: 616px) {
     main {
         margin: 0 1rem;
@@ -261,6 +275,7 @@ input, select {
         --text: #ddd;
         --black: #f0f0f0;
         --red: rgb(200, 75, 75);
-        --blend: multiply;
+        --blend: overlay;
+        --opacity: 0.5;
     }
 }
