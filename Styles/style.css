@@ -54,6 +54,7 @@ body::before {
 body::after {
     background-color: var(--white);
     mix-blend-mode: var(--blend);
+    opacity: 0.90;
 }
 
 h1 {
