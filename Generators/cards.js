@@ -15,8 +15,8 @@ function random(array) {
 }
 
 function draw(cards) {
-    if (!shuffled?.length) {
-        return `<i>No more cards!</i>`;
+    if (cards > shuffled?.length) {
+        return `<i>Not enough cards!</i>`;
     }
 
     let hand = [];

@@ -280,6 +280,24 @@ option {
     cursor: pointer;
 }
 
+html.dark #drawn {
+    text-shadow: 0 0 4px gray;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: grey;
+}
+
 @media screen and (max-width: 616px) {
     main {
         margin: 0 1rem;
