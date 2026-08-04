@@ -38,20 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (theme == "dark") {
         document.getElementById("toggle").innerHTML = "☀️";
-        document.documentElement.classList.add("dark");
     }
     else if (theme == "light") {
         document.getElementById("toggle").innerHTML = "🌒";
-        document.documentElement.classList.remove("dark");
     }
     else {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             document.getElementById("toggle").innerHTML = "☀️";
-            document.documentElement.classList.add("dark");
         }
         else {
             document.getElementById("toggle").innerHTML = "🌒";
-            document.documentElement.classList.remove("dark");
         }
     }
 });
