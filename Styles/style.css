@@ -17,7 +17,7 @@ html.dark {
 }
 
 * {
-    font-family: "JetBrains Mono", "Blobs", "Blobmoji";
+    font-family: "Maple Mono", "Blobs", "Blobmoji", monospace;
     color: var(--text);
     font-size: 1rem;
     transition: color 300ms ease,
@@ -278,10 +278,6 @@ option {
     right: 0;
     font-size: 24px;
     cursor: pointer;
-}
-
-html.dark #drawn {
-    text-shadow: 0 0 4px gray;
 }
 
 ::-webkit-scrollbar {
