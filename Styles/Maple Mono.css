@@ -14,5 +14,16 @@
 
 * {
   font-feature-settings:
-  "calt" 1;
+  "calt" 1,
+  "cv01" 1,
+  "cv34" 1,
+  "cv35" 1,
+  "cv66" 1,
+  "ss03" 1,
+  "ss05" 1,
+  "ss07" 1,
+  "ss08" 1,
+  "ss09" 1,
+  "ss10" 1,
+  "ss11" 1;
 }
