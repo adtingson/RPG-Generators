@@ -17,7 +17,7 @@ html.dark {
 }
 
 * {
-    font-family: "Maple Mono", "Blobs", "Blobmoji", monospace;
+    font-family: "JetBrains Mono", "Blobs", "Blobmoji", monospace;
     color: var(--text);
     font-size: 1rem;
     transition: color 300ms ease,
